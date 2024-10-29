@@ -53,4 +53,61 @@ p {
 .margin-container {
     margin: 0 30px;
 }
+
+.menu-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 40px 0;
+}
+
+.menu-emoji {
+    /* border: 1px solid grey; */
+    width: 70px;
+    height: 89px;
+    opacity: 72%;
+    /* font-weight: 400; */
+    font-size: 78.72px;
+    line-height: 98.4px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.menu-info {
+    margin-left: 30px;
+    /* border: 1px solid red; */
+}
+
+.menu-title {
+    /* border: 1px solid red; */
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.menu-description {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #8b8b8b;
+}
+
+.menu-price {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.add {
+    margin-left: auto;
+    width: 50px;
+    height: 50px;
+    color: #3c3c3c;
+    border: 1.5px solid #dedede;
+    border-radius: 50px;
+}
 /* Colors */
