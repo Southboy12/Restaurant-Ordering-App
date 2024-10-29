@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'smythe';
+} 
+
+/* Layout */
+
+main {
+    border: 1px solid red;
+    width: 600px;
+    height: 1161px;
+    margin: 0 auto;
+}
+
+header {
+    /* border: 1px solid black; */
+    color: #ffffff;
+    width: 600px;
+    height: 167px;
+    background-image: url('https://s3-alpha-sig.figma.com/img/8453/64ec/acaeaea44c5e3a8cd7159c5d52f26662?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lX8x9OFER0Qu5XwiylelUwS~H1~cIpr56vC-Vve4AtXhE1fmnmG5ky5BA0duxmdCeEgWCw8ktf8HICp3Hyn2OVxcjPiIP3HXJClycZYsa7Q23Lh5tQYhNtVLpOtXscn5JhQKXdIUuz8Voi5ouZf3sHj3H4dzqydF64Qf4r7EHf3dCKJSw45TppGzB5OV~DUPEy-7PHRf9SUwqzit6HWbYs8j4dZY0jzbEdse6LJFCftgUAPkZS91N3WDABLsO6x173j6iDjN7BCXfo7e5~U3Ep50o4PqUmn2P72UCWRudJib2CvvStqmzhvMjnHmTkqqcuFnbQvuszs2rAc~gzT3LA__');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Typography */
+
+h1 {
+    /* border: 1px solid #fff; */
+    width: 169.28px;
+    font-size: 39px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    /* border: 1px solid #fff; */
+    margin-top: 15px;
+    width: 275.46px;
+    line-height: 13.8px;
+    font-size: 22.42px;
+    font-weight: 400;
+}
+
+.header-text {
+    /* border: 1px solid #fff; */
+    padding: 50px 0;
+}
+
+.margin-container {
+    margin: 0 30px;
+}
+/* Colors */
