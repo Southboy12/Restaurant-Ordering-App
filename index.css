@@ -7,10 +7,12 @@ body {
 /* Layout */
 
 main {
+    position: relative;
     border: 3px solid #000000;
     width: 600px;
     margin: 5px auto;
     border-radius: 15px;
+    background: #ffffff;
 }
 
 header {
@@ -113,8 +115,17 @@ p {
     cursor: pointer;
 }
 
+.add-btn:disabled {
+    cursor: not-allowed;
+}
+
+#purchase-btn:disabled{
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
 .pre-checkout {
-    /* visibility: hidden; */
+    visibility: hidden;
     padding: 20px 0;
 }
 
@@ -173,4 +184,73 @@ p {
     border-radius: 3px;
     color: #ffffff;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+/* modal */
+
+.payment-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 540px;
+    height: 450px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 3.89px;
+    border: 1.3px solid #757575;
+    box-shadow: 0px 0px 6px 2px #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 30px;
+}
+
+.modal-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31.12px;
+    margin: 0;
+}
+
+.input-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    height: 10px;
+    border: 1.3px solid #757575;
+    border-radius: 3.89px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #757575;
+    padding: 30px;
+}
+
+.pay-button {
+    background: #16db99;
+    height: 60px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 31px;
 }
