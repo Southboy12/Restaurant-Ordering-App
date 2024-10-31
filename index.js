@@ -5,6 +5,9 @@ const menuEl = document.querySelector('#menus')
 const preCheckout = document.querySelector('#pre-checkout')
 
 
+
+
+
 document.addEventListener('click', function(e) {
     if (e.target.dataset.key) {
         handleAddMenu(e.target.dataset.key)
@@ -45,10 +48,23 @@ function handleAddMenu(btnId) {
         <div class="divider margin-container"></div>
         <div class="total-section order-item margin-container">
             <h3 class="total order-title">Total price:</h3>
-            <p class="price">$12</p>
+            <p class="price">$${orderLIst.reduce((total, order) => total + order.price, 0) }</p>
         </div>
         <button class="purchase-btn" id="purchase-btn">Complete order</button>
     `
+    preCheckout.style.visibility = 'visible'
+
+    const addBtns = document.querySelectorAll('.add-btn')
+    const main = document.querySelector('#main')
+
+    document.querySelector('#purchase-btn').addEventListener('click', function() {
+        addBtns.forEach(addBtn => {
+            addBtn.disabled = true
+        });
+        document.querySelector('#purchase-btn').disabled = true
+        document.querySelector('#payment-modal').style.display = 'block'
+        
+    })
 }
 
 function getMenuHtml() {
@@ -67,11 +83,22 @@ function getMenuHtml() {
         `
     }).join('')
 
+    preCheckout.innerHTML = `
+        <h3 class="checkout-title">Your order</h3>
+        <div class="order-entry margin-container" id="order-item">
+        </div>
     
-    
+        <div class="divider margin-container"></div>
+        <div class="total-section order-item margin-container">
+            <h3 class="total order-title">Total price:</h3>
+            <p class="price">$</p>
+        </div>
+        <button class="purchase-btn" id="">Complete order</button>
+    `
 
     return allMenu
 }
+
 
 
 function render() {
