@@ -103,17 +103,18 @@ p {
     color: #000000;
 }
 
-.add {
+.add-btn {
     margin-left: auto;
     width: 50px;
     height: 50px;
     color: #3c3c3c;
     border: 1.5px solid #dedede;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 .pre-checkout {
-    visibility: hidden;
+    /* visibility: hidden; */
     padding: 20px 0;
 }
 
@@ -155,6 +156,7 @@ p {
     border: none;
     background: transparent;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .divider {
@@ -170,4 +172,5 @@ p {
     border: none;
     border-radius: 3px;
     color: #ffffff;
+    cursor: pointer;
 }
