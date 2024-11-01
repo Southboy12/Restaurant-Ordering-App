@@ -3,6 +3,7 @@ import { menuArray  } from "./data";
 
 const menuEl = document.querySelector('#menus')
 const preCheckout = document.querySelector('#pre-checkout')
+const loginForm = document.querySelector('#login-form')
 
 
 
@@ -13,6 +14,8 @@ document.addEventListener('click', function(e) {
         handleAddMenu(e.target.dataset.key)
     }    
 })
+
+document.addEventListener('submit', handlePaymentSubmit)
 
 let orderLIst = []
 
@@ -67,6 +70,18 @@ function handleAddMenu(btnId) {
     })
 }
 
+function handlePaymentSubmit(e) {
+    e.preventDefault()
+
+    const paymentFormData = new FormData(loginForm)
+
+    const name = paymentFormData.get("name")
+
+    document.querySelector('#payment-modal').style.display = 'none'
+    preCheckout.innerHTML = `<h3 class="thanks margin-container">Thanks, ${name}! Your order is on its way</h3>`
+
+}
+
 function getMenuHtml() {
     
     const allMenu = menuArray.map(menu => {
@@ -95,7 +110,6 @@ function getMenuHtml() {
         </div>
         <button class="purchase-btn" id="">Complete order</button>
     `
-
     return allMenu
 }
 
